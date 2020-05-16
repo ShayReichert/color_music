@@ -1,0 +1,115 @@
+/************************************************************
+Fichier : style.scss
+Theme name :
+Description: 
+Author: Shay Reichert
+Version: 1.0
+Tags:
+**************************************************************
+
+Table of Contents:
+
+0. Import (fonts, sass...)
+1. BODY
+2. HEADER
+3. SECTIONS
+4. FOOTER
+
+**************************************************************/
+
+/************************************************
+0.	Import
+************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/************************************************
+1.	BODY
+************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+/************************************************
+2.	HEADER
+************************************************/
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header {
+    h1 {
+        margin: 50px 0px 30px 0px;
+        text-align: center;
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+.pads {
+    display: flex;
+    
+    width: 100%;
+    > div {
+        flex: 1;
+        border-radius: 50% 50% 0 0;
+        box-shadow: 7px 8px 9px 9px #094153;
+        height: 150px;
+        width: 100px;
+    }
+}
+.pad1 {
+    background: #6ae7a2;
+}
+.pad2 {
+    background: #d3c260;
+}
+.pad3 {
+    background: #d36060;
+}
+.pad4 {
+    background: #d360a7;
+}
+.pad5 {
+    background: #8260d3;
+}
+.pad6 {
+    background: #6096d3;
+}
+
+
+
+/************************************************
+3.	KEYFRAMES ANIMATION
+************************************************/
+@keyframes jump{
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 50%;
+        left: 50%;
+    }
+    100% {
+        bottom: 0%;
+        left: 70%;
+    }
+}
+.visual > div {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 20px 0px #09415357;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+}
