@@ -3,12 +3,12 @@ window.addEventListener('load', () => {
     const pads = document.querySelectorAll(".pads div");
     const visual = document.querySelector(".visual");
     const colors = [
-        '#60d394',
-        '#d3c260',
-        '#d36060',
-        '#d360a7',
-        '#8260d3',
-        '#6096d3'
+        'radial-gradient(circle at center, #60d394, #60d39400)',
+        'radial-gradient(circle at center, #d3c260, #60d39400)',
+        'radial-gradient(circle at center, #d36060, #60d39400)',
+        'radial-gradient(circle at center, #d360a7, #60d39400)',
+        'radial-gradient(circle at center, #8260d3, #60d39400)',
+        'radial-gradient(circle at center, #6096d3, #60d39400)'
     ];
 
     console.log(sounds[0]);
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
     const createBubbles = (index) => {
         const bubble = document.createElement("div");
         visual.appendChild(bubble);
-        bubble.style.backgroundColor = colors[index];
+        bubble.style.backgroundImage = colors[index];
         bubble.style.animation = 'jump 1s ease';
         bubble.addEventListener('animationend', function () {
             visual.removeChild(this);
@@ -48,21 +48,27 @@ window.addEventListener('load', () => {
         switch (event.keyCode) {
             case 87:
                 $('.pad1').addClass("press");
+                createBubbles(0);
                 break;
             case 88:
                 $('.pad2').addClass("press");
+                createBubbles(1);
                 break;
             case 67:
                 $('.pad3').addClass("press");
+                createBubbles(2);
                 break;
             case 86:
                 $('.pad4').addClass("press");
+                createBubbles(3);
                 break;
             case 66:
                 $('.pad5').addClass("press");
+                createBubbles(4);
                 break;
             case 78:
                 $('.pad6').addClass("press");
+                createBubbles(5);
                 break;
         }
     }

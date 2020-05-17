@@ -1,10 +1,9 @@
 /************************************************************
 Fichier : style.scss
-Theme name :
-Description: 
+Theme name : colorMusic
+Description: Make music with colors
 Author: Shay Reichert
-Version: 1.0
-Tags:
+Tags: javascript music app color
 **************************************************************
 
 Table of Contents:
@@ -12,8 +11,8 @@ Table of Contents:
 0. Import (fonts, sass...)
 1. BODY
 2. HEADER
-3. SECTIONS
-4. FOOTER
+3. PADS
+4. KEYFRAMES ANIMATIONS
 
 **************************************************************/
 /************************************************
@@ -31,11 +30,6 @@ Table of Contents:
 body {
   font-family: "Montserrat", sans-serif; }
 
-p em {
-  font-size: 1.1rem;
-  color: grey;
-  letter-spacing: 0.7px; }
-
 /************************************************
 2.	HEADER
 ************************************************/
@@ -47,16 +41,24 @@ p em {
   align-items: center; }
 
 header h1 {
-  margin: 50px 0px 30px 0px;
+  margin: 5rem 0px 0.3rem 0px;
   text-align: center;
-  font-size: 40px; }
+  font-size: 3.4rem; }
 header p {
-  font-size: 20px; }
+  font-size: 1.2rem;
+  text-align: center;
+  color: grey; }
 
+/************************************************
+3.	PADS
+************************************************/
 .pads {
   display: flex;
   width: 100%; }
   .pads > div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     flex: 1;
     border-radius: 50% 50% 0 0;
     box-shadow: 7px 8px 9px 9px #094053bb;
@@ -68,6 +70,9 @@ header p {
       transform: scale(1.1);
       opacity: 1;
       box-shadow: 5px 6px 7px 8px #094053bb; }
+  .pads span {
+    font-size: 70px;
+    opacity: .2; }
 
 .pad1 {
   background: #6ae7a2; }
@@ -95,22 +100,19 @@ header p {
 ************************************************/
 @keyframes jump {
   0% {
-    bottom: 0%;
-    left: 20%; }
-  50% {
-    bottom: 50%;
-    left: 50%; }
+    bottom: 40%;
+    left: 40%;
+    transform: scale(1); }
   100% {
-    bottom: 0%;
-    left: 70%; } }
+    bottom: 40%;
+    left: 40%;
+    transform: scale(3); } }
 .visual > div {
   position: absolute;
-  height: 80px;
-  width: 80px;
+  height: 50vw;
+  width: 50vw;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 20px 0px #09415357;
-  bottom: 0%;
-  left: 20%;
+  opacity: .6;
   z-index: -1; }
 
 /*# sourceMappingURL=style.css.map */
